@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MGB Shoes: confira os detalhes do Pedido 15.">
+    <title>MGB Shoes | Pedido 15</title>
+    <style>
+      :root { --ink:#0c1018; --paper:#f4f6f9; --card:#fff; --muted:#677181; --line:#d8dee8; --red:#e31b23; --blue:#2f65e5; --shadow:0 14px 36px rgba(12,16,24,.12); }
+      * { box-sizing:border-box; }
+      body { margin:0; color:var(--ink); background:var(--paper); font-family:Tahoma,Verdana,sans-serif; line-height:1.45; }
+      header { position:relative; isolation:isolate; overflow:hidden; color:#fff; background:var(--ink); border-bottom:4px solid #e9edf3; }
+      header::before,header::after { position:absolute; z-index:-1; width:54vw; height:7px; content:""; transform:rotate(-13deg); transform-origin:left center; }
+      header::before { top:28px; right:-12vw; background:var(--red); box-shadow:0 15px 0 var(--blue); }
+      header::after { bottom:16px; left:-11vw; background:var(--blue); box-shadow:0 -15px 0 var(--red); }
+      .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+      .brand { padding:26px 0 4px; color:#e9edf3; font-size:.86rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+      .hero { padding:18px 0 54px; }
+      h1 { max-width:680px; margin:0; font-size:clamp(2.35rem,6vw,4.2rem); letter-spacing:-.045em; line-height:.95; }
+      .hero p { max-width:570px; margin:17px 0 0; color:#e9edf3; font-size:1.04rem; }
+      main { width:min(1120px,calc(100% - 32px)); margin:-22px auto 56px; }
+      .lookup { display:grid; grid-template-columns:1fr auto; gap:18px; align-items:center; padding:20px; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); }
+      label { display:block; margin-bottom:7px; color:#555e6d; font-size:.82rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+      input { width:100%; padding:14px 15px; color:var(--ink); background:#fff; border:1px solid #bfc7d4; border-radius:9px; font:inherit; outline:none; }
+      input:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(47,101,229,.2); }
+      .count { color:#555e6d; font-size:.9rem; font-weight:800; white-space:nowrap; }
+      .notice { margin:28px 0 20px; color:#3c4552; text-align:center; }
+      .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+      .card { overflow:hidden; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 22px rgba(12,15,20,.07); transition:transform 180ms ease,box-shadow 180ms ease; }
+      .card:hover { box-shadow:0 15px 30px rgba(12,15,20,.15); transform:translateY(-3px); }
+      .photo { display:block; width:100%; height:clamp(280px,30vw,350px); padding:12px; background:#edf0f4; object-fit:contain; object-position:center; }
+      .details { padding:18px; }
+      .person { margin:0 0 5px; color:var(--red); font-size:.76rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+      .shirt { margin:0; font-size:1.2rem; line-height:1.15; }
+      .specs { margin:16px 0 0; padding:0; list-style:none; }
+      .specs li { display:flex; justify-content:space-between; gap:12px; padding:8px 0; border-top:1px solid #e7eaf0; font-size:.92rem; }
+      .specs span { color:var(--muted); }
+      .specs strong { text-align:right; }
+      .empty { display:none; margin:36px 0; color:var(--muted); text-align:center; }
+      footer { margin-top:44px; padding-top:18px; color:var(--muted); border-top:1px solid var(--line); text-align:center; font-size:.88rem; }
+      @media(max-width:820px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+      @media(max-width:560px) { .brand { padding-top:20px; } .hero { padding-top:24px; } .lookup { grid-template-columns:1fr; gap:10px; } .count { white-space:normal; } .grid { grid-template-columns:1fr; } .photo { height:330px; } }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap brand">MGB Shoes</div>
+      <div class="wrap hero">
+        <h1>Confira o seu pedido</h1>
+        <p>Encontre a camiseta ou acessório, o modelo e o tamanho registrados no Pedido 15.</p>
+      </div>
+    </header>
+    <main>
+      <section class="lookup" aria-label="Buscar pedido">
+        <div>
+          <label for="search">Encontre seu pedido</label>
+          <input id="search" type="search" placeholder="Digite seu nome" autocomplete="name">
+        </div>
+        <div id="count" class="count" aria-live="polite">8 pedidos</div>
+      </section>
+      <p class="notice">Confira com atenção. Se algum detalhe estiver diferente do que você pediu, avise a pessoa responsável pelo pedido.</p>
+      <section id="orders" class="grid" aria-label="Pedidos registrados">
+        <article class="card" data-search="dudu palmeiras azul">
+          <img class="photo" src="palmeiras-azul.jpeg" alt="Camisa Palmeiras Azul">
+          <div class="details"><p class="person">Dudu</p><h2 class="shirt">Palmeiras Azul</h2><ul class="specs"><li><span>Modelo</span><strong>Torcedor</strong></li><li><span>Tamanho</span><strong>XL</strong></li></ul></div>
+        </article>
+        <article class="card" data-search="sampaio vasco 2026 kids">
+          <img class="photo" src="vasco-kids.jpg" alt="Camisa Vasco 2026 infantil">
+          <div class="details"><p class="person">Sampaio</p><h2 class="shirt">Vasco 2026</h2><ul class="specs"><li><span>Modelo</span><strong>Kids</strong></li><li><span>Tamanho</span><strong>14</strong></li></ul></div>
+        </article>
+        <article class="card" data-search="sampaio vasco 2026 kids">
+          <img class="photo" src="vasco-kids.jpg" alt="Camisa Vasco 2026 infantil">
+          <div class="details"><p class="person">Sampaio</p><h2 class="shirt">Vasco 2026</h2><ul class="specs"><li><span>Modelo</span><strong>Kids</strong></li><li><span>Tamanho</span><strong>16</strong></li></ul></div>
+        </article>
+        <article class="card" data-search="alexandre real madrid kids">
+          <img class="photo" src="real-madrid.webp" alt="Camisa Real Madrid infantil">
+          <div class="details"><p class="person">Alexandre</p><h2 class="shirt">Real Madrid</h2><ul class="specs"><li><span>Modelo</span><strong>Kids</strong></li><li><span>Tamanho</span><strong>26</strong></li></ul></div>
+        </article>
+        <article class="card" data-search="renan flamengo torcida black">
+          <img class="photo" src="flamengo-torcida-black.jpg" alt="Camisa Flamengo Torcida Black">
+          <div class="details"><p class="person">Renan</p><h2 class="shirt">Flamengo Torcida Black</h2><ul class="specs"><li><span>Modelo</span><strong>Torcedor</strong></li><li><span>Tamanho</span><strong>XL</strong></li></ul></div>
+        </article>
+        <article class="card" data-search="brevao brevão bermuda nike">
+          <img class="photo" src="bermuda-nike.jpg" alt="Bermuda Nike">
+          <div class="details"><p class="person">Brevão</p><h2 class="shirt">Bermuda Nike</h2><ul class="specs"><li><span>Tamanho</span><strong>2XL</strong></li></ul></div>
+        </article>
+        <article class="card" data-search="brevao brevão prada">
+          <img class="photo" src="prada.jpg" alt="Camiseta Prada">
+          <div class="details"><p class="person">Brevão</p><h2 class="shirt">Prada</h2><ul class="specs"><li><span>Tamanho</span><strong>2XL</strong></li></ul></div>
+        </article>
+        <article class="card" data-search="brevao brevão bucks">
+          <img class="photo" src="bucks.jpeg" alt="Camisa Bucks de algodão">
+          <div class="details"><p class="person">Brevão</p><h2 class="shirt">Bucks</h2><ul class="specs"><li><span>Modelo</span><strong>Algodão</strong></li><li><span>Tamanho</span><strong>2XL</strong></li></ul></div>
+        </article>
+      </section>
+      <p id="empty" class="empty">Nenhum pedido encontrado. Tente escrever apenas parte do nome.</p>
+      <footer>Lista atualizada a partir do pedido registrado.</footer>
+    </main>
+    <script>
+      const search = document.querySelector('#search');
+      const cards = [...document.querySelectorAll('.card')];
+      const count = document.querySelector('#count');
+      const empty = document.querySelector('#empty');
+      const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+      function filterOrders() {
+        const term = normalize(search.value.trim());
+        let shown = 0;
+        cards.forEach(card => {
+          const match = !term || normalize(card.dataset.search).includes(term);
+          card.hidden = !match;
+          if (match) shown += 1;
+        });
+        count.textContent = term ? `${shown} pedido${shown === 1 ? '' : 's'} encontrado${shown === 1 ? '' : 's'}` : `${shown} pedidos`;
+        empty.style.display = shown ? 'none' : 'block';
+      }
+      search.addEventListener('input', filterOrders);
+    </script>
+  </body>
+</html>

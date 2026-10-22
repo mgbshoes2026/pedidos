@@ -29,6 +29,7 @@
       .card { overflow:hidden; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 22px rgba(12,15,20,.07); transition:transform 180ms ease,box-shadow 180ms ease; }
       .card:hover { box-shadow:0 15px 30px rgba(12,15,20,.15); transform:translateY(-3px); }
       .photo { display:block; width:100%; height:clamp(280px,30vw,350px); padding:12px; background:#edf0f4; object-fit:contain; object-position:center; }
+      .photo-placeholder { display:flex; align-items:center; justify-content:center; color:var(--muted); font-weight:700; text-align:center; }
       .details { padding:18px; }
       .person { margin:0 0 5px; color:var(--red); font-size:.76rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
       .shirt { margin:0; font-size:1.2rem; line-height:1.15; }
@@ -56,7 +57,7 @@
           <label for="search">Encontre seu pedido</label>
           <input id="search" type="search" placeholder="Digite seu nome" autocomplete="name">
         </div>
-        <div id="count" class="count" aria-live="polite">8 pedidos</div>
+        <div id="count" class="count" aria-live="polite">10 pedidos</div>
       </section>
       <p class="notice">Confira com atenção. Se algum detalhe estiver diferente do que você pediu, avise a pessoa responsável pelo pedido.</p>
       <section id="orders" class="grid" aria-label="Pedidos registrados">
@@ -84,13 +85,21 @@
           <img class="photo" src="bermuda-nike.jpg" alt="Bermuda Nike">
           <div class="details"><p class="person">Brevão</p><h2 class="shirt">Bermuda Nike</h2><ul class="specs"><li><span>Tamanho</span><strong>2XL</strong></li></ul></div>
         </article>
-        <article class="card" data-search="brevao brevão prada">
-          <img class="photo" src="prada.jpg" alt="Camiseta Prada">
-          <div class="details"><p class="person">Brevão</p><h2 class="shirt">Prada</h2><ul class="specs"><li><span>Tamanho</span><strong>2XL</strong></li></ul></div>
-        </article>
         <article class="card" data-search="brevao brevão bucks">
           <img class="photo" src="bucks.jpeg" alt="Camisa Bucks de algodão">
-          <div class="details"><p class="person">Brevão</p><h2 class="shirt">Bucks</h2><ul class="specs"><li><span>Modelo</span><strong>Algodão</strong></li><li><span>Tamanho</span><strong>2XL</strong></li></ul></div>
+          <div class="details"><p class="person">Brevão</p><h2 class="shirt">Bucks</h2><ul class="specs"><li><span>Modelo</span><strong>Cotton</strong></li><li><span>Tamanho</span><strong>2XL</strong></li></ul></div>
+        </article>
+        <article class="card" data-search="brevao brevão the north face cotton">
+          <div class="photo photo-placeholder">Foto ainda não disponível</div>
+          <div class="details"><p class="person">Brevão</p><h2 class="shirt">The North Face</h2><ul class="specs"><li><span>Modelo</span><strong>Cotton</strong></li><li><span>Tamanho</span><strong>2XL</strong></li></ul></div>
+        </article>
+        <article class="card" data-search="gilmar city manchester torcedor">
+          <img class="photo" src="city.jpg" alt="Camisa do Manchester City">
+          <div class="details"><p class="person">Gilmar</p><h2 class="shirt">City</h2><ul class="specs"><li><span>Modelo</span><strong>Torcedor</strong></li><li><span>Tamanho</span><strong>XL</strong></li></ul></div>
+        </article>
+        <article class="card" data-search="gilmar psg paris saint germain torcedor">
+          <img class="photo" src="psg.jpg" alt="Camisa do PSG">
+          <div class="details"><p class="person">Gilmar</p><h2 class="shirt">PSG</h2><ul class="specs"><li><span>Modelo</span><strong>Torcedor</strong></li><li><span>Tamanho</span><strong>XL</strong></li></ul></div>
         </article>
       </section>
       <p id="empty" class="empty">Nenhum pedido encontrado. Tente escrever apenas parte do nome.</p>
